@@ -1,0 +1,61 @@
+.advantages
+    &__title
+        margin-bottom: 20px
+        & span
+            display: block
+            font-weight: 400
+    &-item
+        width: 30%
+        &s
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+        &__count
+            color: $blue-middle
+            font-weight: 900
+            font-size: px-to-rem(72px)
+            display: block
+            margin-bottom: 5px
+
+        &__name
+            font-size: px-to-rem(48px)
+            margin-bottom: 5px
+            display: block
+        &__description
+            color: $blue-light
+            font-size: px-to-rem(24px)
+@media (max-width: 1200px)
+    .advantages
+        &-item
+            width: 50%
+            margin-bottom: 20px
+            &__count
+            font-size: px-to-rem(52px)
+            display: block
+            &__name
+                font-size: px-to-rem(38px)
+            &__description
+                font-size: px-to-rem(18px)
+@media (max-width: 600px)
+    .advantages
+        &-item
+            width: 45%
+            line-height: 1
+            &__count
+                font-size: px-to-rem(42px)
+                display: block
+            &__name
+                font-size: px-to-rem(28px)
+            &__description
+                font-size: px-to-rem(14px)
+@media (max-width: 360px)
+    .advantages
+        &-item
+            width: 45%
+            &__count
+                font-size: px-to-rem(42px)
+                display: block
+            &__name
+                font-size: px-to-rem(24px)
+            &__description
+                font-size: px-to-rem(12px)

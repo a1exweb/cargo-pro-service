@@ -1,0 +1,83 @@
+.box-sides
+    display: flex
+    justify-content: space-between
+.price
+    &-item
+        display: flex
+        justify-content: space-between
+        background-color: $white
+        margin-bottom: 30px
+        padding: 15px
+        border-left: 10px solid $blue
+        &__name
+            font-weight: 700
+            font-size: 36px
+        &__description
+            font-weight: 400
+            font-size: 24px
+        &__price-tag
+            align-self: center
+            font-size: 24px
+            font-weight: 900
+            color: $blue
+            text-align: right
+.reviews::-webkit-scrollbar
+    width: 10px
+    height: 20px
+.reviews::-webkit-scrollbar-track
+    background-color: $gray-light
+.reviews::-webkit-scrollbar-thumb
+    height: 20px
+    background-color: $blue
+::-webkit-scrollbar-corner
+    background-color: red
+.review
+    margin-bottom: 40px
+    &s
+        background-color: $white
+        padding: 15px
+        max-height: 563px
+        overflow-y: scroll
+        
+    &__user
+        &-info
+            display: flex
+            align-items: center
+            margin-bottom: 15px
+        &-photo
+            border-radius: 50%
+            max-width: 87px
+            margin-right: 15px
+        &-head
+            display: flex
+            flex-direction: column
+        &-name
+            font-size: 36px
+        &-title
+            font-size: 24px
+        &-message
+            font-size: 24px
+@media (max-width: 800px)
+    .price
+        &-item
+            &__name
+                font-size: 18px
+                margin-bottom: 10px
+                display: block
+            &__description
+                font-size: 11px
+            &__price-tag
+                font-size: 12px
+    .review        
+        &__user
+            &-photo
+                max-width: 57px
+            &-head
+                display: flex
+                flex-direction: column
+            &-name
+                font-size: 20px
+            &-title
+                font-size: 14px
+            &-message
+                font-size: 14px

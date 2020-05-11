@@ -1,0 +1,259 @@
+.nav
+    position: fixed
+    top: 0
+    left: 0
+    height: 51px
+    width: 100%
+    margin: auto
+    background-color: #fff
+    border-bottom: 1px solid #ccc
+    z-index: 999
+    &__phone
+        font-size: px-to-rem(16px)
+        & svg
+            max-width: 20px
+            max-height: 20px
+            display: none
+    &-wrap
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 50px
+.show-menu
+    display: none
+.menu
+    display: flex
+    max-width: 600px
+    width: 100%
+    padding: 0
+    justify-content: space-between
+    list-style: none
+    &__link
+        position: relative
+        color: #000
+        text-decoration: none
+        transition: .5s
+        &:hover
+            color: $blue
+        &:after
+            position: absolute
+            bottom: -5px
+            left: -5px
+            content: ''
+            width: 50%
+            height: 25px
+            background-color: $blue-light
+            transition: .5s
+            z-index: -1
+        &:hover:after
+            width: calc(100% + 10px)
+        &_active
+            color: $blue
+        &_active
+            &:after
+                width: calc(100% + 10px)
+.main-title
+    max-width: 592px
+    font-size: px-to-rem(36px)
+    span
+        font-weight: 400
+        color: $blue
+#top
+    display: none
+    position: fixed
+    bottom: 20px
+    right: 20px
+    font-size: 20px
+    height: 40px
+    width: 40px
+    background-color: transparent
+    border: 0
+    border-radius: 50%
+    color: $blue
+    background-color: $blue-middle
+.hero
+    position: relative
+    padding-top: 0
+    &__background
+        position: absolute
+        right: 0
+        top: 0
+        z-index: -1
+    &__main-title
+        margin-top: px-to-rem(150px)
+    &__description
+        max-width: 588px
+        color: $blue
+        font-size: 18px
+        margin-bottom: 20px
+    &__form
+        max-width: 345px
+        &-description
+            max-width: 345px
+            color: $blue
+            font-weight: 700
+            font-size: 18px
+            margin-bottom: 20px
+.form
+    display: flex
+    flex-direction: column
+    &__input
+        background-color: transparent
+        padding: 5px
+        margin-bottom: 25px
+        padding-left: 0
+        border: 0
+        border-bottom: 1px solid $blue-middle
+        color: $blue
+        &:focus
+            border-bottom: 1px solid $blue
+        &::-webkit-input-placeholder
+            color: $blue-middle
+        &:-ms-input-placeholder
+            color: $blue-middle
+        &::-ms-input-placeholder
+            color: $blue-middle
+        &::placeholder
+            color: $blue-middle
+        ::-moz-placeholder
+            color: $blue-middle
+    .button
+        background-color: $blue
+        color: $white
+        padding: 20px
+        font-weight: 700
+        border: 0
+        &:hover
+            background-color: lighten($blue, 10%)
+@media (max-width: 1400px)
+    .hero
+        &__background
+            zoom: .8
+@media (max-width: 1250px)
+    .hero
+        &__background
+            top: 100px
+            zoom: .7
+        &__description
+            max-width: 400px
+    html
+        font-size: 14px
+    .logo
+        max-width: 200px
+    .menu
+        max-width: unset
+        background-color: #fff
+    .show-menu
+        position: relative
+        display: flex
+        width: 25px
+        height: 2px
+        background-color: #000
+        border: 0
+        
+        &:after, &:before
+            position: absolute
+            left: 0
+            top: 5px
+            content: ''
+            width: 25px
+            height: 2px
+            background-color: #000
+        &:before
+            top: -5px
+        &_active
+            background-color: transparent
+            &:before
+                top: 0
+                transform: rotate(-45deg)
+            &:after
+                top: 0
+                transform: rotate(45deg)
+        
+    .menu
+        display: none
+        flex-direction: column
+        position: absolute
+        top: 51px
+        right: 0
+        margin: 0
+        text-align: center
+        &_active
+            display: flex
+        &__link
+            display: flex
+            justify-content: center
+            color: #000
+            background-color: #eee
+            width: 100%
+            padding: 15px
+            border-bottom: 1px solid #fff
+            transition: .25s
+            &:hover, &_active
+                background-color: darken(#eee, 5%)
+                color: $blue
+            &:after
+                display: none
+    .hero
+        &__main-title
+            margin-top: px-to-rem(100px)
+@media (max-width: 900px)
+    .hero
+        &__background
+            top: 150px
+            zoom: .5
+        &__description
+            max-width: 300px
+@media (max-width: 700px)
+    .hero
+        &__background
+            top: 200px
+            zoom: .4
+        &__description
+            max-width: 200px
+            font-size: 14px
+    .main-title
+        font-size: 28px
+@media (max-width: 600px)
+    .hero
+        &__background
+            top: 225px
+            zoom: .35
+        &__description
+            max-width: 200px
+            font-size: 14px
+    .main-title
+        font-size: 24px
+@media (max-width: 500px)
+    html
+        font-size: 12px
+    .hero
+        &__background
+            top: 250px
+            zoom: .3
+        &__description
+            max-width: 200px
+            font-size: 14px
+    .main-title
+        font-size: 22px
+@media (max-width: 450px)
+    .hero
+        &__background
+            top: 225px
+        &__description
+            max-width: 180px
+            font-size: 12px
+    .main-title
+        font-size: 20px
+@media (max-width: 400px)
+    .hero
+        &__description
+            max-width: 144px
+    .main-title
+        font-size: 18px
+    .nav
+        &__phone
+            span
+                display: none
+            & svg
+                display: flex
