@@ -11,7 +11,7 @@
 	<nav class="nav">
         <div class="container">
             <div class="nav-wrap">
-                <img src="img/logo.png" alt="CARGO-PRO-SERVICE" class="logo nav__logo">
+                <img data-src="img/logo.png" alt="CARGO-PRO-SERVICE" class="logo nav__logo lazyload">
                     <ul class="menu">
                         <li class="menu__item"><a class="menu__link menu__link_active" href="#head-1">О компании</a></li>
                         <li class="menu__item"><a class="menu__link" href="#head-2">Преимущества</a></li>
@@ -36,10 +36,11 @@
 					<input class="form__input" type="tel" name="userPhone" placeholder="Ваш телефон*">
 				</div>
 				<input class="form__input" type="text" name="userComment" placeholder="Ваш комментарий">
+				<a href="#" class="form__policy">Политика конфиденциальности</a>
 				<button class="button button_hero">Отправить заявку</button>
 			</form>
 			<div class="hero__background">
-				<img src="img/main-bg.png" alt="Илюстрация грузчка">
+				<img data-src="img/main-bg.png" alt="Илюстрация грузчка" class="lazyload">
 			</div>
         </section>
 </div>
@@ -126,7 +127,7 @@
 				<div class="reviews">
 					<div class="review">
 						<div class="review__user-info">
-							<img src="img/reviews/user-1.jpg" alt="Фото" class="review__user-photo">
+							<img data-src="img/reviews/user-1.jpg" alt="Фото" class="review__user-photo lazyload">
 							<div class="review__user-head">
 								<span class="review__user-name">Козлов Александр</span>
 								<span class="review__user-title">Переезд квартиры</span>
@@ -136,7 +137,7 @@
 					</div>
 					<div class="review">
 						<div class="review__user-info">
-							<img src="img/reviews/user-2.jpg" alt="Фото" class="review__user-photo">
+							<img data-src="img/reviews/user-2.jpg" alt="Фото" class="review__user-photo lazyload">
 							<div class="review__user-head">
 								<span class="review__user-name">Панфильев Игорь</span>
 								<span class="review__user-title">Переезд квартиры</span>
@@ -146,7 +147,7 @@
 					</div>
 					<div class="review">
 						<div class="review__user-info">
-							<img src="img/reviews/user-2.jpg" alt="Фото" class="review__user-photo">
+							<img data-src="img/reviews/user-2.jpg" alt="Фото" class="review__user-photo lazyload">
 							<div class="review__user-head">
 								<span class="review__user-name">Панфильев Игорь</span>
 								<span class="review__user-title">Переезд квартиры</span>
@@ -163,9 +164,9 @@
 			<div class="left-side">
 				<h2 class="title left-side__title">Наш автопарк</h2>
 				<div class="slider">
-					<img src="img/slider/slide-1.jpeg" alt="Фото">
-					<img src="img/slider/slide-2.jpeg" alt="Фото">
-					<img src="img/slider/slide-3.jpeg" alt="Фото">
+					<img data-src="img/slider/slide-1.jpeg" alt="Фото" class="lazyload">
+					<img data-src="img/slider/slide-2.jpeg" alt="Фото" class="lazyload">
+					<img data-src="img/slider/slide-3.jpeg" alt="Фото" class="lazyload">
 				</div>
 			</div>
 			<div class="right-side">
@@ -181,6 +182,7 @@
 						<input class="form__input" type="text" name="userPhone" required placeholder="Ваш телефон*">
 					</div>
 					<input class="form__input" type="text" name="userQuestion" placeholder="Ваш вопрос">
+					<a href="#" class="form__policy">Политика конфиденциальности</a>
 					<button class="button button_hero">Отправить заявку</button>
 				</form>
 			</div>
