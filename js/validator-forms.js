@@ -16,12 +16,12 @@ $('#request').validate({
   messages: {
     userName: {
       required: "Укажите имя",
-      minlength: jQuery.validator.format("Минимальная длинна почты {0} символов"),
-      maxlength: jQuery.validator.format("Максимальная длинна почты {0} символов"),
+      minlength: jQuery.validator.format("Минимальная длинна имени {0} символов"),
+      maxlength: jQuery.validator.format("Максимальная длинна имени {0} символов"),
     },
     userPhone: {
       required: "Введите Ваш телефон",
-      minlength: jQuery.validator.format("Минимальная длинна сообщения {0} символов"),
+      minlength: jQuery.validator.format("Минимальная длинна телефона {0} символов"),
     }
   },
   submitHandler: function() {
@@ -60,12 +60,12 @@ $('#question').validate({
   messages: {
     userName: {
       required: "Укажите имя",
-      minlength: jQuery.validator.format("Минимальная длинна почты {0} символов"),
-      maxlength: jQuery.validator.format("Максимальная длинна почты {0} символов"),
+      minlength: jQuery.validator.format("Минимальная длинна имени {0} символов"),
+      maxlength: jQuery.validator.format("Максимальная длинна имени {0} символов"),
     },
     userPhone: {
       required: "Введите Ваш телефон",
-      minlength: jQuery.validator.format("Минимальная длинна сообщения {0} символов"),
+      minlength: jQuery.validator.format("Минимальная длинна телефона {0} символов"),
     }
   },
   submitHandler: function() {
