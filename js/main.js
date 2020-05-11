@@ -71,7 +71,7 @@ $(document).ready(function () {
                     var offset = $element.offset().top
 
                     if (scroll > offset && counter == 0) {
-                        $('#map').fadeIn(500);
+                        $('.footer-right-side').append('<iframe id="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Aeab98daf6e5007cf4559215c33fd0fc4e3fb6e1188e61b057e4730201cee4526&amp;source=constructor"></iframe>');
                         counter = 1;
                     }
                 });
