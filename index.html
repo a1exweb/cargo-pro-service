@@ -28,10 +28,14 @@
         <section id="head-1" class="hero">
 			<h1 class="main-title hero__main-title"><span>Нужна</span> ПОМОЩЬ ПРИ ПЕРЕЕЗДЕ ИЗ ОФИСА ИЛИ КВАРТИРЫ?</h1>
 			<p class="hero__description">Мы перевезем Ваши вещи без головой боли. Опытные грузчики обеспечат береженую транспортировку Ваших любимых вещей прямо до машины, а водитель, пристегнув их ремнем безопасности, проведет незабываемую экскурсию до нового местожительства.</p>
-			<form action="#" method="POST" class="form hero__form">
+			<form action="request.php" method="POST" class="form hero__form" id="request">
 				<p class="hero__form-description">Оставьте заявку — и ваш переезд станет нашей заботой!</p>
-				<input class="form__input" type="text" name="userName" required placeholder="Ваше имя*">
-				<input class="form__input" type="text" name="userPhone" required placeholder="Ваш телефон*">
+				<div class="form__input-group">
+					<input class="form__input" type="text" name="userName" placeholder="Ваше имя*">
+				</div>
+				<div class="form__input-group">
+					<input class="form__input" type="tel" name="userPhone" placeholder="Ваш телефон*">
+				</div>
 				<input class="form__input" type="text" name="userComment" placeholder="Ваш комментарий">
 				<button class="button button_hero">Отправить заявку</button>
 			</form>
@@ -42,7 +46,7 @@
 </div>
 <section id="head-2" class="advantages bg-blue">
 	<div class="container">
-			<h2 class="advantages__title"><span>Наши</span>Преимущества</h2>
+			<h2 class="advantages__title"><span>Наши</span>преимущества</h2>
 			<div class="advantages-items">
 				<div class="advantages-item">
 					<span class="advantages-item__count">10 +</span>
@@ -66,7 +70,7 @@
 					<p class="advantages-item__description">Трудяг готовые носить<br> ваши вещи на руках, как<br> собственную жену.</p>
 				</div>
 				<div class="advantages-item">
-					<span class="advantages-item__count">15 +</span>
+					<span class="advantages-item__count">5 +</span>
 					<span class="advantages-item__name">Компаний</span>
 					<p class="advantages-item__description">Более 5-ти компаний уже<br> доверяют нам в переездах.
 					</p>
@@ -167,12 +171,16 @@
 			</div>
 			<div class="right-side">
 				<h2 class="title right-side__title">Остались вопросы?</h2>
-				<form action="#" method="POST" class="form auto-questions__form">
+				<form action="question.php" method="POST" class="form auto-questions__form" id="question">
 					<p class="auto-questions__form-description">Оставьте заявку,<br> 
 						и мы вам перезвоним!
 						</p>
-					<input class="form__input" type="text" name="userName" required placeholder="Ваше имя*">
-					<input class="form__input" type="text" name="userPhone" required placeholder="Ваш телефон*">
+					<div class="form__input-group">
+						<input class="form__input" type="text" name="userName" required placeholder="Ваше имя*">
+					</div>
+					<div class="form__input-group">
+						<input class="form__input" type="text" name="userPhone" required placeholder="Ваш телефон*">
+					</div>
 					<input class="form__input" type="text" name="userQuestion" placeholder="Ваш вопрос">
 					<button class="button button_hero">Отправить заявку</button>
 				</form>
@@ -213,7 +221,11 @@
 </section>
 <button id="top">&#9650;
 </button>
-<script src="js/all.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/validator-forms.js"></script>
 </body>
 </html>

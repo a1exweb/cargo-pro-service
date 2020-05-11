@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  outline-color: #ccc;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto'; }
+
+button {
+  cursor: pointer; }
+
+.container {
+  width: 90%;
+  margin: auto; }
+
+h1 {
+  margin-top: 70px; }
+
+section {
+  padding-top: 20px; }
+
+h2 {
+  margin-bottom: 20px; }
+
+a {
+  color: #000;
+  text-decoration: none; }
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 51px;
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc; }
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px; }
+
+#show-menu {
+  display: none; }
+
+.menu {
+  display: flex;
+  max-width: 500px;
+  width: 100%;
+  padding: 0;
+  justify-content: space-between;
+  list-style: none; }
+  .menu__link {
+    position: relative;
+    color: #000;
+    text-decoration: none; }
+    .menu__link:after {
+      position: absolute;
+      bottom: -5px;
+      left: -5px;
+      content: '';
+      width: 50%;
+      height: 25px;
+      background-color: #EFF7F9;
+      transition: .5s;
+      z-index: -1; }
+    .menu__link:hover:after {
+      width: calc(100% + 10px); }
+    .menu__link_active {
+      font-weight: bold; }
+    .menu__link_active:after {
+      width: calc(100% + 10px); }
+
+#top {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  height: 80px;
+  background-color: transparent;
+  border: 0; }
+
+@media (max-width: 1200px) {
+  #show-menu {
+    position: relative;
+    display: flex;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    border: 0; }
+    #show-menu:after, #show-menu:before {
+      position: absolute;
+      left: 0;
+      top: 5px;
+      content: '';
+      width: 25px;
+      height: 2px;
+      background-color: #000; }
+    #show-menu:before {
+      top: -5px; }
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 51px;
+    left: 0;
+    text-align: center; }
+    .menu__link {
+      display: flex;
+      justify-content: center;
+      color: #000;
+      background-color: #eee;
+      width: 100%;
+      padding: 15px;
+      border-bottom: 1px solid #fff;
+      transition: .25s; }
+    .menu:hover, .menu_active {
+      background-color: #e1e1e1; }
+    .menu:after {
+      display: none; }
+  #show-menu:focus ~ .menu, #show-menu:active ~ .menu {
+    display: flex; }
+  .menu:hover {
+    display: flex; } }

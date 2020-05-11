@@ -106,6 +106,9 @@
         border: 0
         border-bottom: 1px solid $blue-middle
         color: $blue
+        width: 100%
+        &-group
+            position: relative
         &:focus
             border-bottom: 1px solid $blue
         &::-webkit-input-placeholder
@@ -127,11 +130,24 @@
         transition: .2s
         &:hover
             background-color: lighten($blue, 10%)
+div.invalid
+    position: absolute
+    top: 0
+    right: 0
+    color: red
+    font-size: 14px
+    padding: 5px
 @media (max-width: 1400px)
     .hero
         &__background
             zoom: .8
 @media (max-width: 1250px)
+    #top
+        border-radius: 0
+        bottom: 0
+        right: 0
+        width: 100%
+        z-index: 999
     .hero
         &__background
             top: 100px
