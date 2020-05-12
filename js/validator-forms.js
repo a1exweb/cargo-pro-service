@@ -27,16 +27,24 @@ $('#request').validate({
   submitHandler: function() {
     $.ajax({
       type: 'POST',
-      url: 'request.php',
+      url: 'mail.php',
       data: $('#request').serialize(),
       success: function (responce) {
         $('#request')[0].reset();
         console.log('Форма успешно отправлена');
-        $('#request').append("<p style='margin-top: 10px; color: green;'>Форма успешно отправлена</>");
+        $('#request').append("<p class='modal-success'>Форма успешно отправлена</p>");
+        $('#question').append("<p class='modal-success'>Форма успешно отправлена</p>");
+        setTimeout(() => {
+          $('.modal-success').fadeOut(500);
+        }, 2500);
       },
       error: function(responce) {
         console.error('error');
-        $('#request').append("<p style='margin-top: 10px; color: red;'>Произошла обишка</p>");
+        $('#request').append("<p class='modal-error'>Произошла обишка</p>");
+        $('#question').append("<p class='modal-success'>Форма успешно отправлена</p>");
+        setTimeout(() => {
+          $('.modal-error').fadeOut(500);
+        }, 2500);
       }
     })
   }
@@ -71,16 +79,22 @@ $('#question').validate({
   submitHandler: function() {
     $.ajax({
       type: 'POST',
-      url: 'question.php',
+      url: 'mail.php',
       data: $('#question').serialize(),
       success: function (responce) {
         $('#question')[0].reset();
         console.log('Форма успешно отправлена');
-        $('#question').append("<p style='margin-top: 10px; color: green;'>Форма успешно отправлена</>");
+        $('#question').append("<p class='modal-success'>Форма успешно отправлена</p>");
+        setTimeout(() => {
+          $('.modal-success').fadeOut(500);
+        }, 2500);
       },
       error: function(responce) {
         console.error('error');
-        $('#question').append("<p style='margin-top: 10px; color: red;'>Произошла обишка</p>");
+        $('#question').append("<p class='modal-error'>Произошла обишка</p>");
+        setTimeout(() => {
+          $('.modal-error').fadeOut(500);
+        }, 2500);
       }
     })
   }
