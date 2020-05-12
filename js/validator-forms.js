@@ -1,12 +1,12 @@
 
 $('#request').validate({
   rules: {
-    userName: {
+    Имя: {
       required: true,
       minlength: 5,
       maxlength: 35
     },
-    userPhone: {
+    Телефон: {
       required: true,
       minlength: 10,
     },
@@ -14,12 +14,12 @@ $('#request').validate({
   errorClass: "invalid",
   errorElement: "div",
   messages: {
-    userName: {
+    Имя: {
       required: "Укажите имя",
       minlength: jQuery.validator.format("Минимальная длинна имени {0} символов"),
       maxlength: jQuery.validator.format("Максимальная длинна имени {0} символов"),
     },
-    userPhone: {
+    Телефон: {
       required: "Введите Ваш телефон",
       minlength: jQuery.validator.format("Минимальная длинна телефона {0} символов"),
     }
@@ -51,12 +51,12 @@ $('#request').validate({
 
 $('#question').validate({
   rules: {
-    userName: {
+    Имя: {
       required: true,
       minlength: 5,
       maxlength: 35
     },
-    userPhone: {
+    Телефон: {
       required: true,
       minlength: 10,
     },
@@ -64,12 +64,12 @@ $('#question').validate({
   errorClass: "invalid",
   errorElement: "div",
   messages: {
-    userName: {
+    Имя: {
       required: "Укажите имя",
       minlength: jQuery.validator.format("Минимальная длинна имени {0} символов"),
       maxlength: jQuery.validator.format("Максимальная длинна имени {0} символов"),
     },
-    userPhone: {
+    Телефон: {
       required: "Введите Ваш телефон",
       minlength: jQuery.validator.format("Минимальная длинна телефона {0} символов"),
     }
@@ -103,7 +103,6 @@ $('#question').validate({
 // mask input
 
 $('input[type="tel"]').mask('+7 (999) 999-99-99');
-
 
 let allowedRegex = /^[а-яА-Яa-zA-Z-.-@]+$/;
 let allowedCharRegex = /[а-яА-Яa-zA-Z-.-@]/;
