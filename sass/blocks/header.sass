@@ -169,28 +169,33 @@ div.invalid
         position: relative
         display: flex
         width: 25px
-        height: 2px
-        background-color: #000
+        height: 15px
+        background-color: transparent
         border: 0
         
         &:after, &:before
             position: absolute
             left: 0
-            top: 5px
+            top: 0
             content: ''
             width: 25px
             height: 2px
             background-color: #000
+            box-shadow: 0 6px 0 0 #000, 0 12px 0 0 #000
         &:before
-            top: -5px
+            display: none
         &_active
             background-color: transparent
+            &:after, &:before
+                top: 50%
+                transform: translateY(-50%)
             &:before
-                top: 0
                 transform: rotate(-45deg)
+                display: block
+                box-shadow: unset
             &:after
-                top: 0
                 transform: rotate(45deg)
+                box-shadow: unset
         
     .menu
         display: none
