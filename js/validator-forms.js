@@ -33,7 +33,6 @@ $('#request').validate({
         $('#request')[0].reset();
         console.log('Форма успешно отправлена');
         $('#request').append("<p class='modal-success'>Форма успешно отправлена</p>");
-        $('#question').append("<p class='modal-success'>Форма успешно отправлена</p>");
         setTimeout(() => {
           $('.modal-success').fadeOut(500);
         }, 2500);
@@ -41,7 +40,6 @@ $('#request').validate({
       error: function(responce) {
         console.error('error');
         $('#request').append("<p class='modal-error'>Произошла обишка</p>");
-        $('#question').append("<p class='modal-success'>Форма успешно отправлена</p>");
         setTimeout(() => {
           $('.modal-error').fadeOut(500);
         }, 2500);
