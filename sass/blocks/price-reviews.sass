@@ -21,16 +21,22 @@
             font-weight: 900
             color: $blue
             text-align: right
-.reviews::-webkit-scrollbar
+.review::-webkit-scrollbar
     width: 10px
     height: 20px
-.reviews::-webkit-scrollbar-track
+.review::-webkit-scrollbar-track
     background-color: $gray-light
-.reviews::-webkit-scrollbar-thumb
+.review::-webkit-scrollbar-thumb
     height: 20px
     background-color: $blue
-::-webkit-scrollbar-corner
-    background-color: red
+::-webkit-scrollbar-track
+    background-color: darken($gray-light, 10%)
+::-webkit-scrollbar
+    width: 15px
+    height: 10px
+::-webkit-scrollbar-thumb
+    height: 20px
+    background-color: darken($blue, 10%)
 .review
     margin-bottom: 40px
     &s
