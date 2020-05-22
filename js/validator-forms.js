@@ -103,33 +103,3 @@ $('#question').validate({
 // mask input
 
 $('input[type="tel"]').mask('+7 (999) 999-99-99');
-
-let allowedRegex = /^[а-яА-Яa-zA-Z-.-@]+$/;
-let allowedCharRegex = /[а-яА-Яa-zA-Z-.-@]/;
-
-$('input').on('paste', function (e) {
-    let newValue = e.originalEvent.clipboardData.getData('Text');
-    if (!allowedRegex.test(newValue)) {
-        e.stopPropagation();
-        return false;
-    }
-});
-
-$('input').keypress(function(e) {
-    return allowedCharRegex.test(e.key);
-});
-
-let allowedRegexTextArea = /^[а-яА-Яa-zA-Z-"!;:,.?\s]+$/g;
-let allowedCharRegexTextArea = /^[а-яА-Яa-zA-Z-"!;:,.?()\s]/;
-$('textarea').on('paste', function (e) {
-  let newValueTextArea = e.originalEvent.clipboardData.getData('Text');
-  if (!allowedRegexTextArea.test(newValueTextArea)) {
-      e.stopPropagation();
-      return false;
-  }
-});
-
-$('textarea').keypress(function(e) {
-  return allowedCharRegexTextArea.test(e.key);
-});
-
